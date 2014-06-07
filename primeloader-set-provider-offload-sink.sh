@@ -26,9 +26,9 @@ NL="
 "
 
 provider_discrete_id=$(xrandr --listproviders | grep -i "${1}" | awk '{ print $4 }')
-printf "Video card provider ID (discrete): ${provider_discrete_id}${NL}"
-
 provider_integrated_id=$(xrandr --listproviders | grep -i "${2}" | awk '{ print $4 }')
+
 printf "Video card provider ID (integrated): ${provider_integrated_id}${NL}"
+printf "Video card provider ID (discrete): ${provider_discrete_id}${NL}"
 
 xrandr --setprovideroffloadsink "${provider_discrete_id}" "${provider_integrated_id}"
