@@ -28,7 +28,6 @@ NL="
 "
 
 XRANDR_PATH=$(command -v xrandr)
-printf "'${XRANDR_PATH}'${NL}"
 if [[ -n "${XRANDR_PATH}" ]]; then
 	XRANDR_OUTPUT=$(xrandr --listproviders | tr "[:upper:]" "[:lower:]")
 
